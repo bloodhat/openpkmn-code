@@ -1,0 +1,20 @@
+CREATE TABLE `Turns` (
+  `ID` int(11) NOT NULL auto_increment,
+  `round_id` int(11) NOT NULL,
+  `attacker_id` int(11) NOT NULL,
+  `defender_id` int(11) NOT NULL,
+  `lead_turn` tinyint(1) NOT NULL,
+  `attacker_pkmn_id` int(11) NOT NULL,
+  `defender_pkmn_id` int(11) NOT NULL,
+  PRIMARY KEY  (`ID`),
+  KEY `Turn_Round` (`round_id`),
+  KEY `Turn_attacker` (`attacker_id`),
+  KEY `Turn_defender` (`defender_id`),
+  KEY `Turn_attacker_pkmn` (`attacker_pkmn_id`),
+  KEY `Turn_defender_pkmn` (`defender_pkmn_id`),
+  CONSTRAINT `Turn_attacker` FOREIGN KEY (`attacker_id`) REFERENCES `Users` (`ID`),
+  CONSTRAINT `Turn_attacker_pkmn` FOREIGN KEY (`attacker_pkmn_id`) REFERENCES `PKMN` (`ID`),
+  CONSTRAINT `Turn_defender` FOREIGN KEY (`defender_id`) REFERENCES `Users` (`ID`),
+  CONSTRAINT `Turn_defender_pkmn` FOREIGN KEY (`defender_pkmn_id`) REFERENCES `PKMN` (`ID`),
+  CONSTRAINT `Turn_Round` FOREIGN KEY (`round_id`) REFERENCES `Rounds` (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=ascii

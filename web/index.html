@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>OPENPKMN</title>
+</head>
+<body>
+
+<form method="post" action="authenticate.php">
+  <h1>OPENPKMN</h1>
+  Username: <input type="text" name="username" />
+  Password: <input type="password" name="password" />
+  <input type="submit" value="Register" name="register"/>
+  <input type="submit" value="Log in" name="login"/>          
+</form>	
+<h3>Please note that your regstration information is being sent <i>in the clear</i>.  This means that if someone is eavesdropping your connection they can get your user name and password.  <i>Don't use a username and password pair that would cause you strife in the unlikely event that it is discovered!!</i></h3>
+  <h4>Eventually this will be SSL encrypted.  An MD5 hash of the password is stored on the server.  The actual opepkmn client/server pair uses AES for encryption.</h4>
+</body>
+</html>

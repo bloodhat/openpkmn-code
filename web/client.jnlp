@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp
+spec="1.0+"
+codebase="http://example.com/"
+href="client.jnlp">
+<information>
+<title>The OPENPKMN Client</title>
+<vendor>The OPENPKMN Project</vendor>
+<homepage href="http://pkmn.org" />
+<description kind="short">Pokemon RBY Battle Simulator</description>
+<description>The client for The OPENPKMN Project's open source Pokemon Red/Blue=Yellow Battle Simulator</description>
+</information>
+<resources>
+<j2se version="1.6+" />
+<jar href="OpenpkmnClient.jar" />
+</resources>
+<security>
+<all-permissions />
+</security>
+<application-desc main-class="openpkmnclient.Main">
+</application-desc>
+</jnlp> 
